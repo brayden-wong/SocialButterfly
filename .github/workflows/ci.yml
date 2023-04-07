@@ -17,7 +17,7 @@ env:
 jobs:
   build-lint:
     env:
-      DATABASE_URL: file:./db.sqlite
+      DATABASE_URL: "mysql://kifhsgx0z9ol3n53yxy4:pscale_pw_6T2CkkDqI84GcpU7nHFuHjFM7mBuD2kwnREl4lw9Epq@aws.connect.psdb.cloud/social-butterfly?sslaccept=strict"
     runs-on: ubuntu-latest
 
     steps:
@@ -54,11 +54,8 @@ jobs:
           path: ${{ github.workspace }}apps/nextjs/.next/cache
           key: ${{ runner.os }}-${{ runner.node }}-${{ hashFiles('**/pnpm-lock.yaml') }}-nextjs
 
-      - name: removeLocke
-        run: rm ./package.lock.json
-
-      - name: Build
-        run: pnpm turbo build
+      - name: Build, Lint, Type-Check
+        run: pnpm turbo build lint type-check
 
       - name: Check workspaces
         run: pnpm manypkg check
