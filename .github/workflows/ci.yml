@@ -54,6 +54,9 @@ jobs:
           path: ${{ github.workspace }}apps/nextjs/.next/cache
           key: ${{ runner.os }}-${{ runner.node }}-${{ hashFiles('**/pnpm-lock.yaml') }}-nextjs
 
+      - name: removeLocke
+        run: rm ./package.lock.json
+
       - name: Build
         run: pnpm turbo build
 
