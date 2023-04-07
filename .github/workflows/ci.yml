@@ -17,7 +17,7 @@ env:
 jobs:
   build-lint:
     env:
-      DATABASE_URL: "mysql://kifhsgx0z9ol3n53yxy4:pscale_pw_6T2CkkDqI84GcpU7nHFuHjFM7mBuD2kwnREl4lw9Epq@aws.connect.psdb.cloud/social-butterfly?sslaccept=strict"
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
     runs-on: ubuntu-latest
 
     steps:
