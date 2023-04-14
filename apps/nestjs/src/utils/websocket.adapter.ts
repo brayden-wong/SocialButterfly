@@ -10,7 +10,7 @@ export class WebSocketAdapter extends IoAdapter {
 
   createIOServer(port: number, options?: ServerOptions) {
     port = this.config.get<number>("SOCKET_PORT") || 8500;
-    const origins = this.config.get<string>("SOCKET_ORIGINS");
+    // const origins = this.config.get<string>("SOCKET_ORIGINS");
 
     // const origin = origins.split(',');
 

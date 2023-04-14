@@ -77,7 +77,7 @@ export const chatRouter = router({
         throw new Error("User is missing profile information");
       }
 
-      let userData = { profileImageUrl, username };
+      const userData = { profileImageUrl, username };
 
       return {
         ...roomData,
@@ -87,5 +87,7 @@ export const chatRouter = router({
 
     return Promise.all(data);
   }),
-  createRoom: protectedProcedure.mutation(async ({ ctx, input }) => {}),
+  createRoom: protectedProcedure.mutation(async ({ ctx, input }) => {
+    console.log("create room");
+  }),
 });

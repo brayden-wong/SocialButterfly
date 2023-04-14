@@ -1,5 +1,4 @@
 import { SignIn } from "@clerk/nextjs";
-import { dark } from "@clerk/themes";
 
 const SignInPage = () => (
   <main className="flex h-screen flex-col items-center justify-center">

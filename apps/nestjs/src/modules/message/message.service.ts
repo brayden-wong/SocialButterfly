@@ -1,9 +1,9 @@
-import { HttpStatus, Inject, Injectable, forwardRef } from "@nestjs/common";
+import { HttpStatus, Inject, Injectable } from "@nestjs/common";
 
 import { ClerkUsersService } from "../clerk";
 import { PrismaService } from "src/modules/prisma";
 
-import { CreateMessageDto, MessageDto } from "./dto";
+import { CreateMessageDto } from "./dto";
 import { WsException } from "@nestjs/websockets";
 
 @Injectable()

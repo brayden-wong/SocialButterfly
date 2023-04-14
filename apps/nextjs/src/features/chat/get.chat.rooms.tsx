@@ -46,7 +46,10 @@ export const GetChatRooms = () => {
       {rooms &&
         rooms.length > 0 &&
         rooms.map((room) => (
-          <div className="relative flex flex-row items-center space-x-2 border-b p-2">
+          <div
+            key={room.id}
+            className="relative flex flex-row items-center space-x-2 border-b p-2"
+          >
             <span>
               <Image
                 width={36}
