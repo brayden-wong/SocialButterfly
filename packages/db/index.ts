@@ -15,8 +15,7 @@ export const prisma =
         : ["error"],
   });
 
-export * from "@prisma/client";
-
 if (process.env.NODE_ENV !== "production") {
   global.prisma = prisma;
 }
+export * from "@prisma/client";
