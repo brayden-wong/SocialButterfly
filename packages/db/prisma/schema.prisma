@@ -19,10 +19,7 @@ model User {
 
   posts   Post[]
   message Message[]
-  room    Room?     @relation(fields: [roomId], references: [id])
-  roomId  String?
-
-  @@index([roomId])
+  rooms   Room[]
 }
 
 model Post {

@@ -15,7 +15,7 @@ const config = {
     ignoreDuringBuilds: !!process.env.CI,
   },
   images: {
-    domains: ["images.clerk.dev"],
+    domains: ["images.clerk.dev", "www.gravatar.com"],
   },
 };
 

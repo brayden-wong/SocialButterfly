@@ -1,4 +1,5 @@
 import { useUser as getUser } from "@clerk/nextjs";
+import { trpc } from "../utils/trpc";
 
 export const useUser = () => {
   const { user } = getUser();

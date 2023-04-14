@@ -6,10 +6,17 @@ import { NavigationLayout } from "../layouts";
 import { ChatBox } from "../features";
 
 import { GetChatRooms } from "../features/chat/get.chat.rooms";
+import { trpc } from "../utils/trpc";
 
 const Home: NextPage = () => {
   const { isSignedIn } = useAuth();
   const user = useUser();
+  // const { data: userData } = trpc.user.getUser.useQuery();
+
+  // if (user && !userData) {
+  //   const { mutate } = trpc.user.createUser.useMutation();
+  //   mutate();
+  // }
 
   return (
     <>
